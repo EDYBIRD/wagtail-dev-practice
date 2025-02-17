@@ -2,7 +2,6 @@ cd ../../
 mysiteName=wagtail-dev-practice
 python -m venv ${mysiteName}/env
 source ${mysiteName}/env/bin/activate
-pip install wagtail
 
 cd ${mysiteName}
 pip install -r requirements.txt
