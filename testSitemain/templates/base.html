@@ -1,5 +1,7 @@
 {% load static wagtailcore_tags wagtailuserbar %}
 
+{% load menu_tags %}
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -26,6 +28,8 @@
         {# Global stylesheets #}
         <link rel="stylesheet" type="text/css" href="{% static 'css/testSitemain.css' %}">
 
+        {% main_menu max_levels=3 template="menus/custom_main_menu.html" %}
+      
         {% block extra_css %}
         {# Override this in templates to add extra stylesheets #}
         {% endblock %}
@@ -33,6 +37,8 @@
 
     <body class="{% block body_class %}{% endblock %}">
         {% wagtailuserbar %}
+
+        {# Main content #}
 
         {% block content %}{% endblock %}
 
